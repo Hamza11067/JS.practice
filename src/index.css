@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --accent-color: #36AA71;
+    --accent-hover: #33a137;
+}
+
+/* nav hover effects  */
+
+.nav-hover, .subnav-hover{
+    position: relative;
+    width: max-content;
+    cursor: pointer;
+}
+
+.nav-hover:before, .subnav-hover:before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid white;
+    bottom: -1px;
+    transition: width .2s;
+}
+
+.subnav-hover:before{
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.nav-hover:hover:before, .subnav-hover:hover:before{
+    width: 70%;
+}
+
+
+
