@@ -75,7 +75,7 @@ window.addEventListener('load', () => {
 
         // Add an event listener to the checkbox to toggle the strikethrough class
         task_checkbox_el.addEventListener("change", () => {
-        if (checkbox.checked) {
+        if (task_checkbox_el.checked) {
             task_input_el.classList.add("strikethrough");
         } else {
             task_input_el.classList.remove("strikethrough");
