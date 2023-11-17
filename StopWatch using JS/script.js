@@ -11,18 +11,23 @@ startTimer.addEventListener('click',() =>{
         clearInterval(int)        
     }
     int = setInterval(displayTimer, 10);
+    startTimer.classList.add('remove');
 });
 
 pauseTimer.addEventListener('click', () =>{
     clearInterval(int)
-    startTimer.innerHTML = "Resume"
+    startTimer.classList.remove('remove');
+    startTimer.innerHTML = "Resume";
 });
+
+
 
 resetTimer.addEventListener('click', () =>{
     clearInterval(int);
     [milliseconds, seconds, minutes, hours] = [0, 0, 0, 0];
     timeRef.innerHTML = "00 : 00 : 00 : 000 ";
     startTimer.innerHTML = "Start";
+    startTimer.classList.remove('remove');
 });
 
 function displayTimer () {
