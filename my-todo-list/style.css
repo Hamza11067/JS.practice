@@ -3,20 +3,33 @@
     padding: 0%;
     box-sizing: border-box;
 }
+
+body{
+    background: #8c52ff;
+}
  
 
 main{
-    background: #8c52ff;
-    padding: 3rem 4rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    width: 560px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
 }
 
 h1{
-    color: white;
-    padding: 1.5rem 0rem;
+    color:  #8c52ff;
 }
 
 #todo-form{
     margin: 0 auto;
+    padding-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,11 +37,11 @@ h1{
 }
 
 #task-input{
-    width: 400px;
+    width: 500px;
     height: 50px;
     border-radius: 8px;
     padding-left: .5rem;
-    outline-color: white;
+    outline-color: lightgray;
     font-size: medium;
 }
 
@@ -42,12 +55,14 @@ h1{
 
 
 button{
-    width: 100px;
+    width: 90px;
     height: 50px;
     font-size: large;
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: orangered;
+    border-color: lightgray;
+    border-width: 1px;
     color: white;
     cursor: pointer;
     transition: .1s;
@@ -66,8 +81,8 @@ button:hover{
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
-    background-color: #8c52ff;
-    width: 520px;
+    background-color: whitesmoke;
+    max-width: 500px;
     height: 50px;
     border-radius: 8px;
 }
@@ -80,7 +95,7 @@ button:hover{
     height: 50px;
     font-size: larger;
     background: transparent;
-    color: white;
+    color:  #8c52ff;
     outline: none;
     border: none;
 }
@@ -94,18 +109,22 @@ button:hover{
     height: 1rem;
     width: 1rem;
     cursor: pointer;
+    outline: none;
 }
 
 .strikethrough{
     text-decoration: line-through;
-    color: lightgray;
+    color: gray;
 }
 
 /* Mobile Responsive */
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
     main{
+        width: 100vw;
+        border-radius: 0px;
         padding: 1rem 1rem;
+        overflow: hidden;
     }
 
     button{
@@ -116,28 +135,7 @@ button:hover{
     .task{
         width: 100vw;
     }
-
-    .text{
-        font-size: large;
-    }
 }    
 
-@media (max-width: 428px) {
 
-    .task, #task-input{
-        height: 40px;
-    }
 
-    .content{
-        margin-top: -5px;
-    }
-
-    button{
-        height: 40px;
-        width: 60px;
-    }
-}
-
-@media (max-width:386px) {
-    
-}
